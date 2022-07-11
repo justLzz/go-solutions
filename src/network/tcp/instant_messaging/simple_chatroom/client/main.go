@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"network/tcp/instant_messaging/simple_chatroom/client/login"
 )
 
 var account string
@@ -32,11 +33,11 @@ func main()  {
 		}
 		if key == 1 {
 			fmt.Println("登录")
-			err := login(account, password)
+			err := login.Login(account, password)
 			if err == nil {
 				fmt.Println("登录成功")
 			} else {
-				fmt.Println("登录是失败")
+				fmt.Println("登录失败")
 			}
 		}
 	}
